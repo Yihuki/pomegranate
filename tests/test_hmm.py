@@ -1,4 +1,3 @@
-from __future__ import (division)
 
 from pomegranate import *
 from pomegranate.parallel import log_probability

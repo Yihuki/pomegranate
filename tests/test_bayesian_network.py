@@ -6,7 +6,6 @@
 These are unit tests for the Bayesian network part of pomegranate.
 '''
 
-from __future__ import division
 
 from pomegranate import from_json
 from pomegranate import DiscreteDistribution
@@ -620,7 +619,7 @@ def assert_discrete_equal(x, y, z=8):
     xd, yd = x.parameters[0], y.parameters[0]
     for key, value in xd.items():
         if round(yd[key], z) != round(value, z):
-            raise ValueError("{} != {}".format(yd[key], value))
+            raise ValueError(f"{yd[key]} != {value}")
 
 
 @with_setup(setup_monty, teardown)

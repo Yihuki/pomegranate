@@ -45,10 +45,10 @@ def from_json(s):
 		d = json.loads(s)
 	except:
 		try:
-			with open(s, 'r') as f:
+			with open(s) as f:
 				d = json.load(f)
 		except:
-			raise IOError("String must be properly formatted JSON or filename of properly formatted JSON.")
+			raise OSError("String must be properly formatted JSON or filename of properly formatted JSON.")
 
 	if d['class'] == 'Distribution':
 		return Distribution.from_json(s)

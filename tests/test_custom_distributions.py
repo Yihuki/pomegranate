@@ -1,4 +1,3 @@
-from __future__ import (division)
 
 from pomegranate import *
 from .tools import with_setup
@@ -16,7 +15,7 @@ import scipy.stats
 
 nan = numpy.nan
 
-class NormalDistribution2():
+class NormalDistribution2:
 	def __init__(self, mu, std):
 		self.mu = mu
 		self.std = std
@@ -55,7 +54,7 @@ class NormalDistribution2():
 	def blank(cls):
 		return NormalDistribution2(0, 0)
 
-class MultivariateGaussianDistribution2():
+class MultivariateGaussianDistribution2:
 	def __init__(self, mu, cov):
 		self.mu = mu
 		self.cov = cov

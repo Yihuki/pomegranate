@@ -5,7 +5,6 @@
 These are unit tests for the Markov network model of pomegranate.
 '''
 
-from __future__ import division
 
 from pomegranate import JointProbabilityTable
 from pomegranate import MarkovNetwork

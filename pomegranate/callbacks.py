@@ -1,7 +1,7 @@
 # callbacks.py
 # Authors: Jacob Schreiber <jmschreiber91@gmail.com>
 
-class Callback(object):
+class Callback:
 	"""An object that adds functionality during training.
 
 	A callback is a function or group of functions that can be executed during
@@ -61,9 +61,9 @@ class ModelCheckpoint(Callback):
 		name = self.name if self.name is not None else self.model.name
 
 		if self.verbose:
-			print("[{}] Saving checkpoint to {}.{}.json".format(epoch, name, epoch))
+			print(f"[{epoch}] Saving checkpoint to {name}.{epoch}.json")
 
-		with open('{}.{}.json'.format(name, epoch), 'w') as outfile:
+		with open(f'{name}.{epoch}.json', 'w') as outfile:
 			outfile.write(model)
 
 

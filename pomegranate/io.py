@@ -5,7 +5,7 @@ try:
 except:
 	pandas = None
 
-class BaseGenerator(object):
+class BaseGenerator:
 	"""The base data generator class.
 
 	This object is inherited by data generator objects in order to specify that

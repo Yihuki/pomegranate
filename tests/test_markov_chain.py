@@ -1,4 +1,3 @@
-from __future__ import (division)
 
 from pomegranate import *
 from .tools import with_setup

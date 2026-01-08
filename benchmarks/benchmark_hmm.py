@@ -26,9 +26,9 @@ def global_alignment( match_distributions, insert_distribution ):
 
 	last_match, last_insert, last_delete = model.start, i0, None
 	for i, distribution in enumerate( match_distributions ):
-		match = State( distribution, name="m{}".format(i+1) )
-		insert = State( insert_distribution, name="i{}".format(i+1) )
-		delete = State( None, name="d{}".format(i+1) )
+		match = State( distribution, name=f"m{i+1}" )
+		insert = State( insert_distribution, name=f"i{i+1}" )
+		delete = State( None, name=f"d{i+1}" )
 		model.add_states([match, insert, delete])
 
 		model.add_transition( last_match, match, 0.5 )

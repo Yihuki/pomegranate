@@ -26,7 +26,8 @@ filenames = [
     "BayesClassifier",
     "MarkovChain",
     "utils",
-    "parallel"
+    "parallel",
+    "pandas"
 ]
 
 distributions = [
@@ -50,8 +51,8 @@ distributions = [
 
 if not use_cython:
     extensions = [
-        Extension("pomegranate.{}".format( name ), [ "pomegranate/{}.{}".format(name, ext) ]) for name in filenames
-    ] + [Extension("pomegranate.distributions.{}".format(dist), ["pomegranate/distributions/{}.{}".format(dist, ext)]) for dist in distributions]
+        Extension(f"pomegranate.{name}", [ f"pomegranate/{name}.{ext}" ]) for name in filenames
+    ] + [Extension(f"pomegranate.distributions.{dist}", [f"pomegranate/distributions/{dist}.{ext}"]) for dist in distributions]
 else:
     extensions = [
             Extension("pomegranate.*", ["pomegranate/*.pyx"]),

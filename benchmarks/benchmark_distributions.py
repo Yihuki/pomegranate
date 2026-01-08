@@ -17,7 +17,7 @@ random.seed(0)
 def print_benchmark( distribution, duration ):
 	"""Formatted print."""
 
-	print( "{:25}: {:.4}s".format( distribution.__class__.__name__, duration ) )
+	print( f"{distribution.__class__.__name__:25}: {duration:.4}s" )
 
 def bench_log_probability( distribution, n=10000000, symbol=5 ):
 	"""Bench a log probability distribution."""

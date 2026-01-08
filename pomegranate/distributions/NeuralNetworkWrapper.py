@@ -3,7 +3,7 @@
 
 import numpy
 
-class NeuralNetworkWrapper():
+class NeuralNetworkWrapper:
     '''A wrapper for a neural network model for use in pomegranate.
     
     This wrapper will store a pointer to the model, as well as an indicator
